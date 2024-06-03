@@ -5,7 +5,21 @@
   <property name="logback" value="logback"/><!-- log를 저장할 최종 디렉토리명 -->
   <property name="logdir" value="D:\Workspace\LogFiles"/>
 
-  <!-- Appenders -->
+  <!-- Appenders
+  ConsoleAppender : 콘솔에 로그를 출력
+  FileAppender : 파일에 로그를 저장
+  RollingFileAppender : 여러개의 파일을 순회하며 로그를 저장
+  SMTPAppender : 로그를 메일로 보냄
+  DBAppender : 데이터베이스에 로그를 저장
+  -->
+
+  <!-- 로그레벨
+  ERROR : 로직 수행 중에 오류가 발생한 경우, 시스템적으로 심각한 문제가 발생하여 작동이 불가한 경우
+  WARN : 시스템 에러의 원인이 될 수있는 경고 레벨, 처리가능한 사항
+  INFO : 상태 변경과 같은 정보성 메세지
+  DEBUG : 어플리케이션의 디버깅을 위한 메시지 레벨
+  TRACE : DEBUG 레벨보다 더 디테일한 메시지를 표현하기 위한 레벨
+  -->
   <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>DEBUG</level>
@@ -17,6 +31,7 @@
 
   <!--
   <appender name="DEBUG_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
     <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
       <level>DEBUG</level>
     </filter>
