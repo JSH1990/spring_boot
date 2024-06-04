@@ -1,11 +1,11 @@
 package studio.thinkground.testproject.data.handler;
 
-import studio.thinkground.testproject.data.entity.ProductEntity;
+import studio.thinkground.testproject.data.entity.Product;
 
 public interface ProductDataHandler {
 
-    ProductEntity saveProductEntity(String productId, String productName, int productPrice, int productStock);
+    Product saveProductEntity(String productId, String productName, int productPrice, int productStock);
 
-    ProductEntity getProductEntity(String productId);
+    Product getProductEntity(String productId);
 
 }

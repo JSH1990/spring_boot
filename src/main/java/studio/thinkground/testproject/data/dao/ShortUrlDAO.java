@@ -1,16 +1,16 @@
 package studio.thinkground.testproject.data.dao;
 
-import studio.thinkground.testproject.data.entity.ShortUrlEntity;
+import studio.thinkground.testproject.data.entity.ShortUrl;
 
 public interface ShortUrlDAO {
 
-    ShortUrlEntity saveShortUrl(ShortUrlEntity shortUrlEntity);
+    ShortUrl saveShortUrl(ShortUrl shortUrl);
 
-    ShortUrlEntity getShortUrl(String originalUrl);
+    ShortUrl getShortUrl(String originalUrl);
 
-    ShortUrlEntity getOriginalUrl(String shortUrl);
+    ShortUrl getOriginalUrl(String shortUrl);
 
-    ShortUrlEntity updateShortUrl(ShortUrlEntity newShortUrlEntity);
+    ShortUrl updateShortUrl(ShortUrl newShortUrl);
 
     void deleteByShortUrl(String shortUrl);
 

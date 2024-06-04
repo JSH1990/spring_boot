@@ -1,11 +1,11 @@
 package studio.thinkground.testproject.data.dao;
 
-import studio.thinkground.testproject.data.entity.ProductEntity;
+import studio.thinkground.testproject.data.entity.Product;
 
 public interface ProductDAO {
 
-  ProductEntity saveProduct(ProductEntity productEntity);
+  Product saveProduct(Product product);
 
-  ProductEntity getProduct(String productId);
+  Product getProduct(String productId);
 
 }

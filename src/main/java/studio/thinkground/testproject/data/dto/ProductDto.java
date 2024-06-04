@@ -3,13 +3,12 @@ package studio.thinkground.testproject.data.dto;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import studio.thinkground.testproject.data.entity.ProductEntity;
+import studio.thinkground.testproject.data.entity.Product;
 
 @Data
 @NoArgsConstructor
@@ -35,12 +34,12 @@ public class ProductDto {
   @Max(value = 9999)
   private int productStock;
 
-  public ProductEntity toEntity(){
-    return ProductEntity.builder()
-            .productId(productId)
-            .productName(productName)
-            .productPrice(productPrice)
-            .productStock(productStock)
+  public Product toEntity(){
+    return Product.builder()
+            .id(productId)
+            .name(productName)
+            .price(productPrice)
+            .stock(productStock)
             .build();
   }
 

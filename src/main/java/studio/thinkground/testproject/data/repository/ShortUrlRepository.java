@@ -1,12 +1,12 @@
 package studio.thinkground.testproject.data.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import studio.thinkground.testproject.data.entity.ShortUrlEntity;
+import studio.thinkground.testproject.data.entity.ShortUrl;
 
-public interface ShortUrlRepository extends JpaRepository<ShortUrlEntity, Long> {
+public interface ShortUrlRepository extends JpaRepository<ShortUrl, Long> {
 
-    ShortUrlEntity findByUrl(String url);
+    ShortUrl findByUrl(String url);
 
-    ShortUrlEntity findByOrgUrl(String originalUrl);
+    ShortUrl findByOrgUrl(String originalUrl);
 
 }
